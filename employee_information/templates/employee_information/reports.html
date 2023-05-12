@@ -1,0 +1,31 @@
+{% extends "employee_information/base.html" %} {% block pageContent %}
+<title>{{ page_title }} | Employee Information System</title>
+<div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
+  <div class="mdc-card">
+    <div class="d-flex justify-content-between">
+      <h4 class="card-title mb-0">Summary of Reports {{day_month_year}}</h4>
+    </div>
+  </div>
+</div>
+
+<div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
+  <div class="mdc-card">
+    <div class="d-flex justify-content-between">
+      <h4 class="card-title mb-0"></h4>
+      <p class="card-text">
+        Total Number of Employees:<strong>{{total_employee}} </strong>
+      </p>
+      <p class="card-text">
+        Today Registed Employees:
+        <strong>{{today_registerd_employees }} </strong>
+      </p>
+      <p class="card-text">
+        Activate Employees: <strong> {{active_employees}}</strong>
+      </p>
+      <p class="card-text">
+        Deactivate Employees:<strong> {{deactive_employees}}</strong>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock pageContent %}
